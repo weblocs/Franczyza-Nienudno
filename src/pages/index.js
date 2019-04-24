@@ -5,6 +5,7 @@ import { ThemeContext } from "../layouts";
 import Blog from "../components/Blog";
 import Hero from "../components/Hero";
 import Seo from "../components/Seo";
+import Blocks from "../components/Blocks";
 
 class IndexPage extends React.Component {
   separator = React.createRef();
@@ -46,11 +47,13 @@ class IndexPage extends React.Component {
           )}
         </ThemeContext.Consumer>
 
-        <hr ref={this.separator} />
+        <Blocks />
+
+        {/* <hr ref={this.separator} />
 
         <ThemeContext.Consumer>
           {theme => <Blog posts={posts} theme={theme} />}
-        </ThemeContext.Consumer>
+        </ThemeContext.Consumer> */}
 
         <Seo facebook={facebook} />
 
@@ -109,7 +112,7 @@ export const query = graphql`
         }
       }
     }
-    bgDesktop: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
+    bgDesktop: imageSharp(fluid: { originalName: { regex: "/aaa/" } }) {
       resize(width: 1200, quality: 90, cropFocus: CENTER) {
         src
       }

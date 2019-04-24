@@ -23,11 +23,12 @@ class Menu extends React.Component {
     }));
 
     this.items = [
-      { to: "/", label: "Home", icon: FaHome },
-      { to: "/category/", label: "Categories", icon: FaTag },
-      { to: "/search/", label: "Search", icon: FaSearch },
-      ...pages,
-      { to: "/contact/", label: "Contact", icon: FaEnvelope }
+      { to: "/", label: "Start" },
+      { to: "/o-nas/", label: "O nas" },
+      { to: "/dlaczego-my/", label: "Dlaczego my" },
+      { to: "/co-oferujemy/", label: "Co oferujemy" },
+       //...pages,
+      { to: "/kontakt/", label: "Kontakt" }
     ];
 
     this.renderedItems = []; // will contain references to rendered DOM elements of menu

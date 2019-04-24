@@ -7,7 +7,7 @@ import { ScreenWidthContext, FontLoadedContext } from "../../layouts";
 import config from "../../../content/meta/config";
 import Menu from "../Menu";
 
-import avatar from "../../images/jpg/avatar.jpg";
+import avatar from "../../images/png/logo.png";
 
 class Header extends React.Component {
   state = {
@@ -41,7 +41,7 @@ class Header extends React.Component {
               <img src={config.gravatarImgMd5=="" ? avatar : config.gravatarImgMd5 } alt={config.siteTitle} />
             </div>
             <div className="type">
-              <h1>{config.headerTitle}</h1>
+              <h1 className="type-main">{config.headerTitle}</h1>
               <h2>{config.headerSubTitle}</h2>
             </div>
           </Link>
@@ -103,6 +103,13 @@ class Header extends React.Component {
             margin: ${theme.space.stack.xs};
           }
 
+          h1.type-main {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: none;
+            letter-spacing: 0.05em;
+          }
+
           h2 {
             font-weight: ${theme.font.weight.standard};
             font-size: ${theme.font.size.xxs};
@@ -111,21 +118,19 @@ class Header extends React.Component {
           }
 
           .logo {
-            border-radius: 65% 75%;
-            border: 1px solid #eee;
             display: inline-block;
-            height: 44px;
+            height: 25px;
+            width: 146px;
             margin: ${theme.space.inline.default};
             overflow: hidden;
-            width: 44px;
             transition: all 0.5s;
 
             .homepage & {
-              height: 60px;
-              width: 60px;
+              width: 146px;
             }
 
             img {
+              min-height: 25px;
               width: 100%;
             }
           }
@@ -218,10 +223,7 @@ class Header extends React.Component {
             .logo {
               margin: ${theme.space.inline.default};
 
-              .fixed & {
-                height: 36px;
-                width: 36px;
-              }
+              
 
               .header.homepage:not(.fixed) & {
                 border: none;
