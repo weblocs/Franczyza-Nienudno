@@ -10,9 +10,10 @@ const Hero = props => {
         <h1>
         Rozpocznij swój własny biznes.
         </h1>
-        {/* <button onClick={scrollToContent} aria-label="scroll">
-          <FaArrowDown />
-        </button> */}
+
+        <button onClick={scrollToContent} aria-label="scroll">
+          Więcej
+        </button>
       </section>
 
       {/* --- STYLES --- */}
@@ -20,8 +21,9 @@ const Hero = props => {
         .hero {
           align-items: center;
           background: #041f60;
-          // background-image: url(${backgrounds.mobile});
+          background-image: url(${backgrounds.mobile});
           background-size: cover;
+          background-position: center;
           color: ${theme.text.color.primary.inverse};
           display: flex;
           flex-flow: column nowrap;
@@ -30,7 +32,23 @@ const Hero = props => {
           height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
+
+          :before {
+            left: 0;
+            height: 0;
+            position: absolute;
+            content: '';
+            background: #000;
+            opacity: 0.0;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index:0;
+          }
         }
+
+        
 
         h1 {
           text-align: center;
@@ -43,6 +61,7 @@ const Hero = props => {
           letter-spacing: 0.04em;
           font-weight: 600;
           text-remove-gap: both 0 "Open Sans";
+          z-index: 1;
 
           :global(strong) {
             position: relative;
@@ -62,18 +81,23 @@ const Hero = props => {
         }
 
         button {
-          background: ${theme.background.color.brand};
-          border: 0;
-          border-radius: 50%;
-          font-size: ${theme.font.size.m};
-          padding: ${theme.space.s} ${theme.space.m};
+          background: transparent;
+          border: 1px solid #fff;
+          color: #fff;
+          font-family: Geomanist;
+          padding: 13px 34px;
+          font-size: 13px;
+          font-weight: 400;
+          letter-spacing: 0.115em;
           cursor: pointer;
-          width: ${theme.space.xl};
-          height: ${theme.space.xl};
+          transition: .2s;
+          outline-style: none;
+          z-index: 1;
 
-          &:focus {
+          &:hover {
             outline-style: none;
-            background: ${theme.color.brand.primary.active};
+            background: #fff;
+            color: #041e60;
           }
 
           :global(svg) {
@@ -102,25 +126,14 @@ const Hero = props => {
 
         @from-width tablet {
           .hero {
-            //background-image: url(${backgrounds.tablet});
-          }
-
-          
-
-          button {
-            font-size: ${theme.font.size.l};
+            background-image: url(${backgrounds.tablet});
           }
         }
 
         @from-width desktop {
           .hero {
-            //background-image: url(${backgrounds.desktop});
-          }
-
-         
-
-          button {
-            font-size: ${theme.font.size.xl};
+            background-image: url(${backgrounds.desktop});
+            background-attachment: fixed;
           }
         }
       `}</style>

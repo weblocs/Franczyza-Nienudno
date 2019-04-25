@@ -55,10 +55,12 @@ const Hero = props => {
       }
         .row {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
         }
         .column {
-            max-width: 250px;
+            flex: 100%;
+            max-width: 100%;
             margin: 0 30px;
 
             h3 {
@@ -75,9 +77,25 @@ const Hero = props => {
                 font-size: 14px;
                 font-weight: 300;
                 line-height: 1.86;
+            }  
+        }
+        @from-width tablet {
+            .column {
+              flex: calc(50% - 60px);
+              width: calc(50% - 60px);
             }
+        }
 
-            
+        @from-width desktop {
+            .row {
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .column {
+              flex: calc(25% - 60px);
+              width: calc(25% - 60px);
+            }
         }
       `}</style>
     </React.Fragment>

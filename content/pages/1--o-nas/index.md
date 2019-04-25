@@ -11,4 +11,4 @@ Jesteśmy pionierami innowacyjnej edukacji i wiemy, że codzienność nie jest n
 
 Nauczyciel pełni rolę instruktora, który aktywnie angażuje dzieci w historię danych zajęć. Uczymy przez zabawę! Bawimy się przez naukę! 
 
-[Dołącz do NIENUDNO.PL](mailto:kontakt@nienudno.pl)
+[Dołącz do NIENUDNO.PL](/kontakt)
