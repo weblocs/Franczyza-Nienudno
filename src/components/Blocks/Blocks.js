@@ -61,7 +61,7 @@ const Hero = props => {
         .column {
             flex: 100%;
             max-width: 100%;
-            margin: 0 30px;
+            margin: 30px;
 
             h3 {
                 color: #005495;
