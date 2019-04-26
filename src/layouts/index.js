@@ -156,6 +156,15 @@ class Layout extends React.Component {
                       h1 {
                         letter-spacing: -0.04em;
                       }
+                      article h1 {
+                        color: #005495;
+                        font-size: 36px !important;
+                        letter-spacing: 0.04em;
+                        font-weight: 600;
+                      }
+                      .gatsby-resp-image-wrapper {
+                        max-width: 1200px !important;
+                      }
                       p {
                         margin: 0;
                       }
@@ -165,6 +174,9 @@ class Layout extends React.Component {
                       a {
                         text-decoration: none;
                         color: #666;
+                      }
+                      a.activeItem {
+                        color: #005495 !important;
                       }
                       main {
                         width: auto;
@@ -178,17 +190,24 @@ class Layout extends React.Component {
                         opacity: 0.9;
                         padding: 13px 34px;
                         font-size: 13px;
-                        color: #fff;
+                        color: #fff !important;
                         display: inline-block;
                         margin-top: 20px;
                         transition: .2s;
+                        font-weight: 400 !important;
+                        text-decoration: none !important;
+                        cursor: pointer;
 
                         :hover {
                           border-color: #005495;
                           background: transparent;
-                          color:  #005495;
+                          color:  #005495 !important;
                         }
-                    }
+                      }
+
+                      
+                    
+
                     `}</style>
                   </React.Fragment>
                 </ScreenWidthContext.Provider>

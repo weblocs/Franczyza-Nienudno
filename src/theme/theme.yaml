@@ -54,12 +54,12 @@ color:
       k: '#2b2826'
     black: '#000000'
   brand:
-    primary: &color-brand-primary '#709425'
-    primaryActive: '#709425'
-    light: '#709425'
-    lightActive: '#709425'
-    dark: '#709425'
-    darkActive: '#709425'
+    primary: &color-brand-primary '#005495'
+    primaryActive: '#005495'
+    light: '#005495'
+    lightActive: '#005495'
+    dark: '#005495'
+    darkActive: '#005495'
   special:
     attention: &color-special-attention orange
 # FONT
@@ -112,7 +112,7 @@ text:
     default: *font-line-height-l
   maxWidth:
     tablet: 650px
-    desktop: 700px
+    desktop: 1000px
 heading:
   family: *font-family-target
   size:

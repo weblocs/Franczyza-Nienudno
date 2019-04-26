@@ -6,28 +6,12 @@ const Article = props => {
 
   return (
     <React.Fragment>
-      <article className="article">{children}</article>
+      
+      {children}
 
       {/* --- STYLES --- */}
       <style jsx>{`
-        .article {
-          padding: ${theme.space.inset.default};
-          margin: 0 auto;
-        }
-        @from-width tablet {
-          .article {
-            padding: ${`calc(${theme.space.default}) calc(${theme.space.default} * 2)`};
-            max-width: ${theme.text.maxWidth.tablet};
-          }
-        }
-        @from-width desktop {
-          .article {
-            padding: ${`calc(${theme.space.default} * 2 + 90px) 0 calc(${
-              theme.space.default
-            } * 2)`};
-            max-width: ${theme.text.maxWidth.desktop};
-          }
-        }
+        
       `}</style>
     </React.Fragment>
   );

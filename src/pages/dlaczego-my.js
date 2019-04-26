@@ -1,9 +1,7 @@
 import React, {Component} from "react";
 import Link from 'gatsby-link';
 
-import ContactBlock from '../components/ContactBlock'
-
-import background from './images/contact.jpg';
+import background from './images/spacex.jpg';
 
 class About extends Component {
     render() {
@@ -11,15 +9,22 @@ class About extends Component {
         <div>
             <div className="article-title">
                 <article>
-                <h1>Kontakt</h1>
-                <p>Jesteś gotowy, aby rozpocząć swój biznes? 
-                  Moze chcesz zadać nam więcej pytań? Z chęcią na nie odpowiemy. Skontaktuj się z nami.</p>
+                <h1>Dlaczego my</h1>
+                <p>Dzięki naszym metodykom stworzyliśmy unikatowy program edukacyjny.</p>
                 </article>
             </div>
+            <article>
             
-            <ContactBlock />
+            <h1>Biznes bez zbędnego ryzyka</h1>
 
+            <p>Stawiamy na dynamiczny rozwój i szybkie efekty wspólnej pracy. 
+            Dokładnie wiemy jak powtórzyć sukces u Ciebie w mieście.</p>
+            <p>Pomożemy Ci zbudować Twój biznes bez zbędnego ryzyka. </p>
+            <Link className="button" to="/kontakt">
+                    Skantakuj się z nami
+            </Link>
             
+            </article>
             <style jsx>{`
                 article {
                     max-width: 800px;
@@ -32,12 +37,6 @@ class About extends Component {
                     }
                     h1 {
                         margin: 1.5em 0 0.8em;
-                    }
-                    h3 {
-                      color: #005495;
-                      font-size: 26px;
-                      letter-spacing: 0.04em;
-                      font-weight: 600;
                     }
                 }
                 .article-title {

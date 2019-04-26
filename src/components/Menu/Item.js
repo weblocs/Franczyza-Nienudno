@@ -11,6 +11,7 @@ const Item = props => {
         <Link
           to={to}
           className={"hiddenItem" in props ? "inHiddenItem" : ""}
+          activeClassName={"activeItem"}
           onClick={onClick}
           data-slug={to}
         >
@@ -44,7 +45,9 @@ const Item = props => {
         }
 
         @from-width desktop {
+          
           .item {
+            
             :global(a) {
               color: ${theme.text.color.primary};
               padding: ${theme.space.inset.s};
@@ -55,16 +58,20 @@ const Item = props => {
               font-size: 10.5pt;
               letter-spacing: 0.115em;
               text-transform: uppercase;
+              
+              
             }
+
+            
 
             :global(.homepage):not(.fixed) & :global(a) {
               color: ${theme.color.neutral.white};
             }
 
-            :global(a:hover) {
+            :global(a:hover){
               color: ${theme.color.brand.primary};
               // background: color(white alpha(-60%));
-              opacity: 0.7;
+              
             }
 
             :global(svg) {
