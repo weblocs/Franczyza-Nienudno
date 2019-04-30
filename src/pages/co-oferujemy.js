@@ -92,7 +92,7 @@ class About extends Component {
                     }
 
                     &.article {
-                        padding: 180px 0 140px;
+                        padding: 180px 10px 140px;
                         margin: 0 auto;
                         z-index: 2;
                         position:relative;
