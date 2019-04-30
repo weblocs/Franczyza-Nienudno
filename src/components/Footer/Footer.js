@@ -42,7 +42,7 @@ const Footer = props => {
 
         @from-width desktop {
           .footer {
-            padding: 0 1em 1.5em;
+            padding: 1.5em 1em 1.5em;
           }
         }
       `}</style>

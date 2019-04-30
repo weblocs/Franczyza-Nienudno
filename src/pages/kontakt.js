@@ -1,26 +1,44 @@
-import React, {Component} from "react";
-import Link from 'gatsby-link';
 
 import ContactBlock from '../components/ContactBlock'
 
-import background from './images/contact.jpg';
+import React, {Component} from "react";
+import Link from 'gatsby-link';
+
+import { graphql } from "gatsby"
+import BackgroundImage from 'gatsby-background-image';
 
 class About extends Component {
+    
     render() {
+        const {
+            data: {
+                placeholderImage
+            }
+          } = this.props;
+
         return(
+            
         <div>
-            <div className="article-title">
-                <article>
-                <h1>Kontakt</h1>
-                <p>Jesteś gotowy, aby rozpocząć swój biznes? 
-                  Moze chcesz zadać nam więcej pytań? Z chęcią na nie odpowiemy. Skontaktuj się z nami.</p>
+            <BackgroundImage Tag="div"
+                           fluid={placeholderImage.childImageSharp.fluid} 
+            >
+                <div className="filter">
+                    <article className="article">
+                    <h1>Kontakt</h1>
+                    <p>Jesteś gotowy, aby rozpocząć swój biznes? 
+                    Moze chcesz zadać nam więcej pytań? Z chęcią na nie odpowiemy. Skontaktuj się z nami.</p>
                 </article>
-            </div>
+                </div>
+            </BackgroundImage>
             
             <ContactBlock />
 
-            
             <style jsx>{`
+                .filter {
+                    background: rgba(0,0,0,.3);
+                    z-index: 1;
+                    position:relative;
+                }
                 article {
                     max-width: 800px;
                     padding: 10px;
@@ -33,46 +51,20 @@ class About extends Component {
                     h1 {
                         margin: 1.5em 0 0.8em;
                     }
-                    h3 {
-                      color: #005495;
-                      font-size: 26px;
-                      letter-spacing: 0.04em;
-                      font-weight: 600;
-                    }
-                }
-                .article-title {
-                background: #1f65a0;
-                background-image: url(${background});
-                background-position: center;
-                background-size: cover;
-                padding: 100px 0;
-                min-height: 300px;
-                position: relative;
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        content: '';
-                        background: #1d3c54;
-                        opacity: 0.25;
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        left: 0;
-                        z-index: 0;
-                    }
-                    @media(min-width: 1000px) {
-                        margin-top: 80px;
-                        background-attachment: fixed;
-                    }
-                    article {
-                        z-index: 1;
+
+                    &.article {
+                        padding: 180px 0 140px;
+                        margin: 0 auto;
+                        z-index: 2;
                         position:relative;
 
                         h1, p {
                             color: #fff;
-                            max-width: 305px;
+                            max-width: 405px;
                             margin-bottom: 0;
                             margin-top: 0;
+                            position: relative;
+                            z-index: 3;
                         }
 
                         h1 {
@@ -80,6 +72,9 @@ class About extends Component {
                         }
                     }
                 }
+
+                
+                    
             `}</style>
         </div>
         
@@ -88,3 +83,15 @@ class About extends Component {
 }
 
 export default About;
+
+export const query = graphql`
+      query {
+        placeholderImage: file(relativePath: { eq: "jpg/contact.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `

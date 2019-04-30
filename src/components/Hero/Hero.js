@@ -39,7 +39,7 @@ const Hero = props => {
             position: absolute;
             content: '';
             background: #000;
-            opacity: 0.0;
+            opacity: 0.3;
             width: 100%;
             height: 100%;
             top: 0;
