@@ -4,9 +4,16 @@ import Link from 'gatsby-link';
 import { graphql } from "gatsby"
 import BackgroundImage from 'gatsby-background-image';
 
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+
 class About extends Component {
     
     render() {
+        const dataChart = [
+        {name: '2016', uczniów: 1000, pv: 2400, amt: 2400},
+        {name: '2017', uczniów: 2000, pv: 2400, amt: 2400},
+        {name: '2018', uczniów: 3000, pv: 2400, amt: 2400},
+        {name: '2019', uczniów: 4000, pv: 2400, amt: 2400}];
         const {
             data: {
                 placeholderImage
@@ -31,6 +38,15 @@ class About extends Component {
                 <h1>Biznes bez zbędnego ryzyka</h1>
                 <p>Stawiamy na dynamiczny rozwój i szybkie efekty wspólnej pracy. Dokładnie wiemy jak powtórzyć sukces u Ciebie w mieście.</p>
                 <p>Pomożemy Ci zbudować Twój biznes bez zbędnego ryzyka. </p>
+
+                <BarChart width={600} height={300} data={dataChart}>
+                    <XAxis dataKey="name" stroke="#8884d8" />
+                    <YAxis />
+                    <Tooltip />
+                    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+                    <Bar type="monotone" dataKey="uczniów" fill="#8884d8" barSize={30} />
+                </BarChart>
+               
                 <Link className="button" to="/kontakt">
                     Skantakuj się z nami
                 </Link>
