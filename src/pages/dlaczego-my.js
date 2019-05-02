@@ -39,6 +39,7 @@ class About extends Component {
                 <p>Stawiamy na dynamiczny rozwój i szybkie efekty wspólnej pracy. Dokładnie wiemy jak powtórzyć sukces u Ciebie w mieście.</p>
                 <p>Pomożemy Ci zbudować Twój biznes bez zbędnego ryzyka. </p>
 
+                <div className="chartBox">
                 <BarChart width={600} height={300} data={dataChart}>
                     <XAxis dataKey="name" stroke="#8884d8" />
                     <YAxis />
@@ -46,12 +47,16 @@ class About extends Component {
                     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                     <Bar type="monotone" dataKey="uczniów" fill="#8884d8" barSize={30} />
                 </BarChart>
-               
+                </div>
+
                 <Link className="button" to="/kontakt">
                     Skantakuj się z nami
                 </Link>
             </article>
             <style jsx>{`
+                .chartBox {
+                    overflow-y: scroll;
+                }
                 .filter {
                     background: rgba(0,0,0,.3);
                     z-index: 1;
