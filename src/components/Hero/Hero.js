@@ -11,6 +11,8 @@ const Hero = props => {
         Rozpocznij swój własny biznes.
         </h1>
 
+        <p>"Programowanie w świecie Minecraft" to niesamowite i pasjonujące zajęcia, które uczą programowania w języku angielskim w przystępnej formie!  </p>
+
         <button onClick={scrollToContent} aria-label="scroll">
           Więcej
         </button>
@@ -32,6 +34,16 @@ const Hero = props => {
           height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
+
+          p {
+            color: #fff;
+            max-width: 540px;
+            font-weight: 500;
+            margin: 0 auto 40px;
+            text-align: center;
+            font-size: 18px;
+            z-index: 2;
+          }
 
           :before {
             left: 0;

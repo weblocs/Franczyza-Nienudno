@@ -17,6 +17,15 @@ class About extends Component {
         return(
             
         <div>
+            <article>
+                <div style={{height:80}}></div>
+                <h1>Produkt</h1>
+                <p>"Programowanie 
+w świecie Minecraft" to niesamowite i pasjonujące zajęcia, które uczą programowania w języku angielskim w przystępnej formie!  
+Nasz kurs trwa cały rok szkolny, a zajęcia prowadzimy przez 60 minut. w grupach od 8 do 12 osób. Każde dziecko pracuje przy jednoosobowym stanowisku z laptopem.
+Zajęcia rozpoczynamy od wprowadzenia schematów blokowych. Z czasem, gdy nasi najmłodsi opanują ten etap i będą gotowi na kolejne przygody, przechodzimy do bardziej wymagających języków programowania, takich jak Python, C++ oraz Java. </p>
+            </article>
+
             <BackgroundImage Tag="div"
                            fluid={placeholderImage.childImageSharp.fluid} 
             >
