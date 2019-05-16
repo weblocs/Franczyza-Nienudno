@@ -19,7 +19,7 @@ const ContactBlock = props => {
             <div className="column">
                 <h3>E-mail</h3>
                 <p>Napisz, aby otrzymać prezentacje pdf z ofertą franczyzową.</p>
-                    <a className="button" href="mailto:kontakt@nienudno.pl">
+                    <a className="button" href="mailto:franczyza@nienudno.pl">
                 kontakt@nienudno.pl
                 </a>
             </div>
